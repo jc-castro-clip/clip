@@ -14,7 +14,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'org.springframework.boot'
 
 bootJar { 
-    baseName = 'clip-assement'
+    baseName = 'clip-assesment'
     version =  '0.1.0'
 }
 
