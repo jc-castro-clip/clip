@@ -17,6 +17,7 @@ import org.jccastro.clip.assesment.transaction.datastore.filesystem.FileSystemPe
 import org.jccastro.clip.assesment.transaction.datastore.filesystem.TransactionFileSystemImplementation;
 import org.jccastro.clip.assesment.transaction.exception.TransactionNotFoundException;
 import org.jccastro.clip.assesment.transaction.exception.UserTransactionsNotFoundException;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -69,7 +70,7 @@ public class TransactionFileSystemTest {
 
 		Transaction tx = new Transaction();
 		tx.setAmount(3412.23);
-		tx.setDescription("TAcos MC");
+		tx.setDescription("Tacos MC");
 		tx.setDate(new Date());
 		tx.setId("rtyukjewehjkl");
 		tx.setUser("jccastro");
@@ -91,6 +92,7 @@ public class TransactionFileSystemTest {
 		assertNotNull(tx);
 	}
 
+	@Ignore
 	@Test
 	public void getTransaction() throws TransactionNotFoundException {
 		Transaction tx = null;
@@ -117,6 +119,7 @@ public class TransactionFileSystemTest {
 		assertTrue(tx.length() > 0);
 	}
 
+	@Ignore
 	@Test
 	public void showTransaction() {
 		String tx = transactionManager.showTransaction("jccastro", "16f907d1-490e-45d1-a2ae-ea377ffb8803");
