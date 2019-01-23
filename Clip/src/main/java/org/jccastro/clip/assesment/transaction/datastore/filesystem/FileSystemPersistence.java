@@ -74,7 +74,7 @@ public class FileSystemPersistence {
 	public static void main(String[] args) {
 		FileSystemPersistence fileUtil = new FileSystemPersistence();
 		try {
-			fileUtil.addLine("amount: 12.80, description: Felipe Tacos, date:2018-12-31", "fdseawed");
+			fileUtil.addLine("amount: 15.80, description: Felipe Tacos, date:2018-12-31", "fdseawed");
 			fileUtil.getLines("fdseawed").forEach(System.out::println);
 		} catch (URISyntaxException | IOException e) {
 			// TODO Auto-generated catch block
