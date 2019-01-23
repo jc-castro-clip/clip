@@ -36,7 +36,7 @@ public class TransactionFileSystemImplementation implements TransactionDataStore
 	public void saveTransaction(Transaction transaction) {
 
 		ObjectMapper objectMapper = new ObjectMapper();
-		String transactionLine;
+		String transactionLine="";
 
 		try {
 			transactionLine = objectMapper.writeValueAsString(transaction);
@@ -70,7 +70,7 @@ public class TransactionFileSystemImplementation implements TransactionDataStore
 		try {
 			lines = fileSystemPersistence.getLines(userId);
 		} catch (URISyntaxException | IOException e) {
-			log.error("Data file not available ", e.getCause());
+			log.error("Data file is not available ", e.getCause());
 
 		}
 
@@ -79,7 +79,7 @@ public class TransactionFileSystemImplementation implements TransactionDataStore
 				try {
 					return TransactionTranslateUtil.translateLine(line);
 				} catch (IOException e) {
-					log.error("Transaction argument not in JSON valid format");
+					log.error("Transaction argument not in a JSON valid format");
 				}
 				return null;
 			}).collect(Collectors.toList());

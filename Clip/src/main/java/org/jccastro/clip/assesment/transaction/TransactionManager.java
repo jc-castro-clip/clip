@@ -36,7 +36,7 @@ public class TransactionManager {
 			txString = TransactionTranslateUtil.translateTransaction(
 					transactionService.addTransaction(tx.getAmount(), tx.getDescription(), tx.getDate(), userId));
 		} catch (IOException e) {
-			log.error("Transaction argument not in JSON valid format");
+			log.error("Transaction argument is not in JSON valid format");
 		}
 
 		log.info(txString);
