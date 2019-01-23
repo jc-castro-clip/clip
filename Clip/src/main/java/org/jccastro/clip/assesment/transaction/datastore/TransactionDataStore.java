@@ -11,10 +11,25 @@ import org.jccastro.clip.assesment.model.Transaction;
  */
 public interface TransactionDataStore {
 
+	/**
+	 * 
+	 * @param transaction
+	 */
 	public void saveTransaction(Transaction transaction);
 	
+	/**
+	 * 
+	 * @param userId
+	 * @param transactionId
+	 * @return
+	 */
 	public Transaction getTransaction(String userId, String transactionId);
 
+	/**
+	 * 
+	 * @param userId
+	 * @return
+	 */
 	public List<Transaction> getUserTransactions(String userId);
 
 }
