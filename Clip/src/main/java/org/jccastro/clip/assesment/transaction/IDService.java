@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 @Component ("idService")
 public class IDService {
 
+	/**
+	 *  Generates ID
+	 */
 	public String generateID() {
 		return UUID.randomUUID().toString();
 	}

@@ -17,7 +17,7 @@ public class TransactionNotFoundException extends Exception {
 	@Override
 	public String getMessage() {
 		
-		return "Transaction not found";
+		return "Transaction was not found";
 	}
 
 }

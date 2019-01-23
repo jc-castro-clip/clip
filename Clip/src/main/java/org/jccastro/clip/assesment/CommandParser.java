@@ -23,7 +23,7 @@ public class CommandParser {
 		TransactionArguments arguments = new TransactionArguments();
 
 		if (numArgs < 2) {
-			log.error("Command not valid");
+			log.error("Command is not valid");
 		}
 
 		if (numArgs == 2) {
